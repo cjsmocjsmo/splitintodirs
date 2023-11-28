@@ -3,6 +3,7 @@ use std::fs::{create_dir, read_dir};
 fn main() {
     let src_dir = "/media/pipi/USB01/DeDuped1/";
     let base_dir = "/media/pipi/USB01/Master/";
+    create_dir(base_dir).unwrap();
     let dest_dir_a = base_dir.to_owned() + "001";
     let dest_dir_b = base_dir.to_owned() + "002";
     let dest_dir_c = base_dir.to_owned() + "003";
