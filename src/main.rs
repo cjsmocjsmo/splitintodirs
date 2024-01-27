@@ -44,7 +44,7 @@ fn main() {
             if !fs::metadata(&out_dir).is_ok() {
                 fs::create_dir(&out_dir).expect("Unable to create directory");
             }
-            let out_str = format!("{}/{}/{}", out_dir, dircount, fname);
+            let out_str = format!("{}/{}", out_dir, fname);
             let res = format!("{} ->\n{}", in_str, out_str);
             print!("{}", res);
             fs::copy(in_str, out_str).expect("Unable to copy file");
