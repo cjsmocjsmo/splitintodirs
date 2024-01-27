@@ -21,7 +21,7 @@ fn main() {
 
     }
 
-    print!("{:?}", grand_vec.len());
+    print!("{:?}", grand_vec[0]);
 }
     
 
