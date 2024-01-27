@@ -27,7 +27,7 @@ fn main() {
     let out_dir = "/media/pi/taz/Master_Split";
     // loop throught src_dir collecting filenames into a vec
     // let mut fn_vec: Vec<String> = Vec::new();
-    let mut dircount = 0;
+    let mut dircount = 1;
     let mut count = 0;
     for entry in read_dir(src_dir).unwrap() {
         count += 1;
