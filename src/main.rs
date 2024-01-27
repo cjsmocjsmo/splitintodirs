@@ -26,7 +26,7 @@ fn main() {
     let src_dir = "/media/pi/taz/Master_Master_Resize2/";
     let out_dir = "/media/pi/taz/Master_Split";
     // loop throught src_dir collecting filenames into a vec
-    let mut fn_vec: Vec<String> = Vec::new();
+    // let mut fn_vec: Vec<String> = Vec::new();
     let mut dircount = 0;
     let mut count = 0;
     for entry in read_dir(src_dir).unwrap() {
@@ -37,8 +37,11 @@ fn main() {
             let filename = path.file_name().unwrap().to_str().unwrap();
             let fn_split = filename.split("/").collect::<Vec<&str>>();
             let fname = fn_split.last().unwrap().to_string();
+            let in_str = format!("{}", filename);
             let out_str = format!("{}/{}/{}", out_dir, dircount, fname);
-            fn_vec.push(out_str.to_string());
+            let res = format!("{} ->\n{}", in_str, out_str);
+            println!("{}", res);
+            // fn_vec.push(out_str.to_string());
             
         } else {
             count = 0;
@@ -47,7 +50,7 @@ fn main() {
 
     }
 
-    print!("{:#?}", fn_vec);
+    // print!("{:#?}", fn_vec);
 }
     
 
