@@ -37,7 +37,7 @@ fn main() {
             let filename = path.file_name().unwrap().to_str().unwrap();
             let fn_split = filename.split("/").collect::<Vec<&str>>();
             let fname = fn_split.last().unwrap().to_string();
-            let in_str = format!("{}", filename);
+            let in_str = format!("{}{}", src_dir, filename);
             let out_str = format!("{}/{}/{}", out_dir, dircount, fname);
             let res = format!("{} ->\n{}", in_str, out_str);
             println!("{}", res);
