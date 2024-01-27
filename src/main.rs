@@ -1,4 +1,5 @@
-use std::fs::{create_dir, read_dir};
+use std::fs;
+use std::fs::read_dir;
 
 fn main() {
     // let src_dir = "/media/pi/taz/Master_Master_Resize2";
@@ -13,7 +14,7 @@ fn main() {
     //         let path = entry.path();
     //         let filename = path.file_name().unwrap().to_str().unwrap();
     //         fn_vec.push(filename.to_string());
-            
+
     //     } else {
     //         count = 0;
     //         grand_vec.push(fn_vec);
@@ -40,17 +41,11 @@ fn main() {
             let in_str = format!("{}{}", src_dir, filename);
             let out_str = format!("{}/{}/{}", out_dir, dircount, fname);
             let res = format!("{} ->\n{}", in_str, out_str);
-            println!("{}", res);
-            // fn_vec.push(out_str.to_string());
-            
+            print!("{}", res);
+            fs::copy(in_str, out_str).expect("Unable to copy file");
         } else {
             count = 0;
             dircount += 1;
         }
-
     }
-
-    // print!("{:#?}", fn_vec);
 }
-    
-
