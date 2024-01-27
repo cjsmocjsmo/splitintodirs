@@ -39,6 +39,11 @@ fn main() {
             let fn_split = filename.split("/").collect::<Vec<&str>>();
             let fname = fn_split.last().unwrap().to_string();
             let in_str = format!("{}{}", src_dir, filename);
+            let out_dir = format!("{}/{}", out_dir, dircount);
+            //create our_dir if it doesn't exist
+            if !fs::metadata(&out_dir).is_ok() {
+                fs::create_dir(&out_dir).expect("Unable to create directory");
+            }
             let out_str = format!("{}/{}/{}", out_dir, dircount, fname);
             let res = format!("{} ->\n{}", in_str, out_str);
             print!("{}", res);
