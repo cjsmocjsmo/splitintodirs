@@ -24,8 +24,8 @@ fn main() {
 
     // print!("{:?}", grand_vec);
 
-    let src_dir = "/media/pi/taz/Master_Master_Resize2/";
-    let out_dir = "/media/pi/taz/Master_Split";
+    let src_dir = "/media/pi/0123-4567/JPG";
+    let out_dir = "/media/pi/0123-4567/Master_Split";
     // loop throught src_dir collecting filenames into a vec
     // let mut fn_vec: Vec<String> = Vec::new();
     let mut dircount = 1;
