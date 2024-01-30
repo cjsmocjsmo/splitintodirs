@@ -1,11 +1,8 @@
 #!/bin/bash
 
 cd /media/pipi/0123-4567/JPG;
-zoo= ls -l | wc -l;
+ls -l | wc -l;
 cd /media/pipi/taz/JPG;
-foo= ls -l | wc -l;
+ls -l | wc -l;
 cd /media/pipi/USB01/JPG;
-boo= ls -l | wc -l;
-
-p=$zoo + $foo + $boo;
-echo $p;
+ls -l | wc -l;
