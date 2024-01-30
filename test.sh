@@ -7,4 +7,5 @@ foo= ls -l | wc -l;
 cd /media/pipi/USB01/JPG;
 boo= ls -l | wc -l;
 
-echo $zoo + $foo + $boo;
+p=$zoo + $foo + $boo;
+echo $p;
