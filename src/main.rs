@@ -27,7 +27,7 @@ fn main() {
 
             // Create out_dir if it doesn't exist
             if !fs::metadata(&out_dir).is_ok() {
-                fs::create_dir(&out_dir).expect("Unable to create directory");
+                fs::create_dir_all(&out_dir).expect("Unable to create directory");
             }
 
             let out_str = format!("{}/{}", out_dir, fname);
