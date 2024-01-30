@@ -24,7 +24,7 @@ fn main() {
 
     // print!("{:?}", grand_vec);
 
-    let src_dir = "/media/pipi/USB01/JPG/";
+    let src_dir = "/media/pipi/USB01/Master_JPG/";
     let out_dir = "/media/pipi/USB01/Master_Split";
     // loop throught src_dir collecting filenames into a vec
     // let mut fn_vec: Vec<String> = Vec::new();
