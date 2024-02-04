@@ -32,7 +32,7 @@ fn main() {
 
             let out_str = format!("{}/{}", out_dir, fname);
             let res = format!("\n{} ->\n{}", in_str, out_str);
-            print!("\nthis one: {}\n", res);
+            println!("\nthis one: {}\n", res);
             match fs::copy(in_str, out_str) {
                 Ok(_) => println!("File copied successfully"),
                 Err(e) => eprintln!("Error copying file {}: {}", fname, e),
