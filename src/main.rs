@@ -31,8 +31,8 @@ fn main() {
             }
 
             let out_str = format!("{}/{}", out_dir, fname);
-            let res = format!("{} ->\n{}", in_str, out_str);
-            print!("{}", res);
+            let res = format!("\n{} ->\n{}", in_str, out_str);
+            print!("\n{}\n", res);
             fs::copy(in_str, out_str).expect("Unable to copy file");
         } else {
             count = 0;
